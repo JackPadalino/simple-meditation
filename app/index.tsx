@@ -29,7 +29,7 @@ const App = () => {
                 Simplifying Meditation for Everyone
               </Text>
             </View>
-            <View>
+            <View className="mb-10">
               <CustomButton
                 onPress={() => router.push("/nature-meditate")}
                 title="Get Started"

@@ -42,7 +42,10 @@ const AffirmationPractice = () => {
         className="flex-1"
       >
         <AppGradient colors={["rgba(0,0,0,0.3)", "rgba(0,0,0,0.9)"]}>
-          <Pressable onPress={() => router.back()} className="absolute top-5">
+          <Pressable
+            onPress={() => router.back()}
+            className="absolute top-5 z-10"
+          >
             <AntDesign name="leftcircleo" size={50} color="white" />
           </Pressable>
           <ScrollView className="mt-20" showsVerticalScrollIndicator={false}>

@@ -5,8 +5,10 @@ import { StatusBar } from "expo-status-bar";
 import { MEDITATION_DATA } from "@/constants/meditation-data";
 import MEDITATION_IMAGES from "@/constants/meditation-images";
 import { LinearGradient } from "expo-linear-gradient";
+import { useExpoRouter } from "expo-router/build/global-state/router-store";
 
 const NatureMeditate = () => {
+  const router = useExpoRouter();
   return (
     <>
       <StatusBar style="light" />
@@ -28,7 +30,7 @@ const NatureMeditate = () => {
               showsVerticalScrollIndicator={false}
               renderItem={({ item }) => (
                 <Pressable
-                  onPress={() => console.log("Pressed")}
+                  onPress={() => router.push(`/meditate/${item.id}`)}
                   className="h-48 my-3 rounded-md overflow-hidden"
                 >
                   <ImageBackground
